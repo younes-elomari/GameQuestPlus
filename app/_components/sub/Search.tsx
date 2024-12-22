@@ -3,8 +3,13 @@ import { IoMdArrowDropright } from "react-icons/io";
 import { motion } from "framer-motion";
 import { slideInFromLeft } from "@/utils/motion";
 import { BsSearch } from "react-icons/bs";
+import { useRef } from "react";
+import useGameQueryStore from "@/app/store";
 
 const Search = () => {
+  const ref = useRef<HTMLInputElement>(null);
+  const setSearchText = useGameQueryStore((s) => s.setSearchText);
+
   return (
     <motion.div
       variants={slideInFromLeft(0.3)}
@@ -21,14 +26,24 @@ const Search = () => {
       </h1>
 
       <div className="w-full h-full flex flex-col gap-4 bg-gray-500 bg-opacity-20 px-3 py-4 text-gray-300">
-        <div className="p-3 border border-gray-700 rounded-xl flex flex-row gap-2 items-center">
-          <input
-            type="text"
-            placeholder="Search Here"
-            className="w-full bg-transparent text-gray-300 text-[16px] font-medium outline-none"
-          />
-          <BsSearch />
-        </div>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            if (ref.current) setSearchText(ref.current.value);
+          }}
+        >
+          <div className="p-3 border border-gray-700 rounded-xl flex flex-row gap-2 items-center">
+            <input
+              ref={ref}
+              type="text"
+              placeholder="Search Here"
+              className="w-full bg-transparent text-gray-300 text-[16px] font-medium outline-none"
+            />
+            <button type="submit">
+              <BsSearch />
+            </button>
+          </div>
+        </form>
       </div>
     </motion.div>
   );
