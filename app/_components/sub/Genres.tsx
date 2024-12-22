@@ -17,7 +17,7 @@ const Genres = () => {
 
   return (
     <motion.div
-      variants={slideInFromLeft(0.6)}
+      variants={slideInFromLeft(0.9)}
       initial={"hidden"}
       whileInView={"visible"}
       viewport={{

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Search from "../sub/Search";
 import Platforms from "../sub/Platforms";
 import GameGrid from "../sub/GameGrid";
+import SortSelector from "../sub/SortSelector";
 
 const Games = () => {
   return (
@@ -15,6 +16,7 @@ const Games = () => {
     >
       <div className="w-[280px] h-auto flex flex-col gap-4">
         <Search />
+        <SortSelector />
         <Genres />
       </div>
       <div className="flex-1 space-y-4">
