@@ -4,6 +4,7 @@ import Genres from "../sub/Genres";
 import { motion } from "framer-motion";
 import Search from "../sub/Search";
 import Platforms from "../sub/Platforms";
+import GameGrid from "../sub/GameGrid";
 
 const Games = () => {
   return (
@@ -16,8 +17,9 @@ const Games = () => {
         <Search />
         <Genres />
       </div>
-      <div className="flex-1">
+      <div className="flex-1 space-y-4">
         <Platforms />
+        <GameGrid />
       </div>
     </motion.div>
   );

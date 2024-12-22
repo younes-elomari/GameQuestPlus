@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./_components/main/NavBar";
+import QueryClientProvider from "./QueryClientProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#010125] overflow-x-hidden`}
       >
-        <NavBar />
-        {children}
+        <QueryClientProvider>
+          <NavBar />
+          {children}
+        </QueryClientProvider>
       </body>
     </html>
   );
