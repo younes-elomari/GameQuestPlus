@@ -2,6 +2,7 @@
 import Game from "@/app/entities/Game";
 import getCroppedImageUrl from "@/app/services/image-url";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { BsStarFill } from "react-icons/bs";
 
 const GameCard = ({ game }: { game: Game }) => {
@@ -14,12 +15,14 @@ const GameCard = ({ game }: { game: Game }) => {
   return (
     <div className="w-full h-full flex flex-col gap-2">
       <div className="w-full h-[320px] rounded-md overflow-hidden border border-fuchsia-900">
-        <motion.img
-          whileHover={{ scale: 1.3, rotate: 15 }}
-          src={getCroppedImageUrl(game.background_image)}
-          alt={game.slug}
-          className="w-full h-full object-cover cursor-pointer"
-        />
+        <Link href={`games/${game.slug}`}>
+          <motion.img
+            whileHover={{ scale: 1.3, rotate: 15 }}
+            src={getCroppedImageUrl(game.background_image)}
+            alt={game.slug}
+            className="w-full h-full object-cover cursor-pointer"
+          />
+        </Link>
       </div>
       <div className="flex flex-col w-full gap-2 px-5 py-3 rounded-md overflow-hidden border border-fuchsia-900">
         <h1 className="text-gray-300 uppercase font-medium text-[18px]">

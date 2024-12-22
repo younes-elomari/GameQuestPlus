@@ -11,3 +11,7 @@
   background: linear-gradient(270deg, rgba(74, 93, 249), rgba(26, 65, 209));
   box-shadow: inset 0 0 12px #bf97ff70;
 }
+
+.Text-shadow {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
