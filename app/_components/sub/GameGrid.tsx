@@ -23,16 +23,18 @@ const GameGrid = () => {
         ))} */}
         {isLoading &&
           skeletons.map((skeleton) => <GameCardSkeleton key={skeleton} />)}
-        {games?.results.map((game) => (
-          <GameCard key={game.id} game={game} />
+        {games?.results.map((game, index) => (
+          <GameCard key={game.id} game={game} index={index} />
         ))}
       </div>
-      <button
-        // variants={slideInFromLeft(0.8)}
-        className="mt-14 py-2 px-8 button-primary text-center font-semibold text-white cursor-pointer rounded-lg max-w-[200px]"
-      >
-        More Games
-      </button>
+      {!isLoading && (
+        <button
+          // variants={slideInFromLeft(0.8)}
+          className="mt-14 py-2 px-8 button-primary text-center font-semibold text-white cursor-pointer rounded-lg max-w-[200px]"
+        >
+          More Games
+        </button>
+      )}
     </div>
   );
 };

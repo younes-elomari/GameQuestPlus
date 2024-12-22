@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsStarFill } from "react-icons/bs";
 
-const GameCard = ({ game }: { game: Game }) => {
+const GameCard = ({ game, index }: { game: Game; index: number }) => {
   const numberOfStars = () => {
     if (game.metacritic >= 80) return [1, 2, 3, 4, 5];
     if (game.metacritic < 80) return [1, 2, 3, 4];
@@ -13,7 +13,15 @@ const GameCard = ({ game }: { game: Game }) => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col gap-2">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: index * 0.2 }}
+      viewport={{
+        once: true,
+      }}
+      className="w-full h-full flex flex-col gap-2"
+    >
       <div className="w-full h-[320px] rounded-md overflow-hidden border border-fuchsia-900">
         <Link href={`games/${game.slug}`}>
           <motion.img
@@ -34,7 +42,7 @@ const GameCard = ({ game }: { game: Game }) => {
           ))}
         </h1>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

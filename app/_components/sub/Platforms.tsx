@@ -2,13 +2,13 @@
 import usePlatforms from "@/app/hooks/usePlatforms";
 import React from "react";
 import { motion } from "framer-motion";
-import { slideInFromTop } from "@/utils/motion";
+import { slideInFromRight } from "@/utils/motion";
 import useGameQueryStore from "@/app/store";
 
 const Platforms = () => {
   const selectedPlatformId = useGameQueryStore((s) => s.gameQuery.platformId);
   const setSelectedPlatformId = useGameQueryStore((s) => s.setPlatformId);
-  const { data: platforms, error, isLoading } = usePlatforms();
+  const { data: platforms } = usePlatforms();
 
   const activePlatform = (id: number | undefined) => {
     return id === selectedPlatformId || undefined ? "bg-fuchsia-600" : null;
@@ -16,8 +16,8 @@ const Platforms = () => {
 
   return (
     <motion.div
-      variants={slideInFromTop}
-      initial="hidden"
+      variants={slideInFromRight(0.8)}
+      initial={"hidden"}
       whileInView={"visible"}
       viewport={{
         once: true,
