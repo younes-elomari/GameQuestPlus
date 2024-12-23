@@ -21,7 +21,7 @@ const Hero = () => {
           alt="hero background"
           width={1920}
           height={1024}
-          className="absolute w-full h-full object-cover opacity-10"
+          className="absolute w-full h-full object-cover opacity-55"
         />
       </motion.div>
       <HeroContant />

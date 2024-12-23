@@ -4,7 +4,7 @@ import GameCard from "./GameCard";
 import useGames from "@/app/hooks/useGames";
 import Game from "@/app/entities/Game";
 import useGameQueryStore from "@/app/store";
-import GameCardSkeleton from "./GameCardSceleton";
+import GameCardSkeleton from "./GameCardSkeleton";
 
 const GameGrid = () => {
   const { data: games, error, isLoading } = useGames();
