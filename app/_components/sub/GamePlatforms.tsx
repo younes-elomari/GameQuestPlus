@@ -33,12 +33,12 @@ const GamePlatforms = ({ platforms }: Props) => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="flex flex-row items-start gap-4 flex-wrap"
+        className="flex flex-row gap-4 w-full items-center"
       >
         {platforms.map((platform, index) => (
           <div
             key={platform.platform.id}
-            className="flex flex-row gap-2 items-center"
+            className="flex flex-row gap-2 items-center w-full"
           >
             <div className="w-[50px] h-[50px] rounded-full overflow-hidden bg-gray-800">
               <img
@@ -47,11 +47,25 @@ const GamePlatforms = ({ platforms }: Props) => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h6 className="text-[18px] font-medium text-gray-200 whitespace-nowrap">
+            <h6 className="text-[18px] font-medium text-gray-200">
               {platform.platform.name}
             </h6>
           </div>
-          // <GamePlatformCard key={index} platform={platform} />
+          // <div
+          //   key={platform.platform.id}
+          //   className="flex flex-row gap-2 items-center w-full"
+          // >
+          //   <div className="w-[50px] h-[50px] rounded-full overflow-hidden bg-gray-800">
+          //     <img
+          //       src={platform.platform.image_background}
+          //       alt={platform.platform.name}
+          //       className="w-full h-full object-cover"
+          //     />
+          //   </div>
+          //   <h6 className="text-[18px] font-medium text-gray-200 whitespace-nowrap">
+          //     {platform.platform.name}
+          //   </h6>
+          // </div>
         ))}
       </motion.div>
     </motion.div>

@@ -16,8 +16,6 @@ const GameDetails = ({ slug }: Props) => {
 
   if (!game) return null;
 
-  console.log(game);
-
   return (
     <div className="relative flex flex-col h-full w-full">
       <GameDetailsHero game={game} slug={game.slug} />
