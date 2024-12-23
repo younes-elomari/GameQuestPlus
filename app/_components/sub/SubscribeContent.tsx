@@ -22,7 +22,7 @@ const SubscribeContent = () => {
       >
         <h1 className="text-5xl font-semibold text-white max-w-[600px] w-auto h-auto">
           Subscibe To Get
-          <span className="uppercase font-semibold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-cyan-500">
+          <span className="uppercase font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-cyan-500">
             {" "}
             Update
           </span>

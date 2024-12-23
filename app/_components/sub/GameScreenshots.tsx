@@ -1,17 +1,19 @@
 "use client";
+import Game from "@/app/entities/Game";
+import useScreenshots from "@/app/hooks/useScreenShots";
 import React from "react";
-import { IoMdArrowDropright } from "react-icons/io";
 import { motion } from "framer-motion";
 import { slideInFromLeft } from "@/utils/motion";
+import { IoMdArrowDropright } from "react-icons/io";
 
 interface Props {
-  platforms: {
-    platform: { id: number; name: string; image_background: string };
-    requirements: { minimum: string; recomended: string };
-  }[];
+  game: Game;
+  slug: string;
 }
 
-const GamePlatforms = ({ platforms }: Props) => {
+const GameScreenshots = ({ game, slug }: Props) => {
+  const { data: scrennshots, isLoading } = useScreenshots(game.id);
+
   return (
     <motion.div
       initial="hidden"
@@ -26,30 +28,25 @@ const GamePlatforms = ({ platforms }: Props) => {
         className="uppercase text-gray-300 text-[18px] font-semibold flex flex-row gap-2 items-center px-3 py-4"
       >
         <IoMdArrowDropright size={28} className="text-fuchsia-600" /> game
-        platforms
+        screenshots
       </motion.h1>
+
       <motion.div
-        variants={slideInFromLeft(0.6)}
+        variants={slideInFromLeft(0.9)}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="flex flex-row gap-4 w-full items-center flex-wrap"
+        className="w-full h-full grid grid-cols-3 gap-4"
       >
-        {platforms.map((platform, index) => (
-          <div
-            key={platform.platform.id}
-            className="flex flex-row gap-2 items-center"
-          >
-            <div className="w-[50px] h-[50px] rounded-full overflow-hidden bg-gray-800">
+        {scrennshots?.results.map((scrennshot) => (
+          <div key={scrennshot.id} className="flex flex-row gap-2 items-center">
+            <div className="w-full h-[260] rounded-md overflow-hidden bg-gray-800 border border-fuchsia-700">
               <img
-                src={platform.platform.image_background}
-                alt={platform.platform.name}
+                src={scrennshot.image}
+                alt={slug}
                 className="w-full h-full object-cover"
               />
             </div>
-            <h6 className="text-[18px] font-medium text-gray-200 whitespace-nowrap">
-              {platform.platform.name}
-            </h6>
           </div>
         ))}
       </motion.div>
@@ -57,4 +54,4 @@ const GamePlatforms = ({ platforms }: Props) => {
   );
 };
 
-export default GamePlatforms;
+export default GameScreenshots;

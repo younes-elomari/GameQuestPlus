@@ -13,9 +13,9 @@ interface Props {
 }
 
 const GameDetailsHero = ({ game, slug }: Props) => {
-  const { data: scrennShots, isLoading } = useScreenshots(game.id);
+  const { data: scrennshots, isLoading } = useScreenshots(game.id);
 
-  const firstImgUrl = scrennShots?.results[0].image;
+  const firstImgUrl = scrennshots?.results[0].image;
 
   const numberOfStars = () => {
     if (game.metacritic >= 80) return [1, 2, 3, 4, 5];
@@ -66,11 +66,11 @@ const GameDetailsHero = ({ game, slug }: Props) => {
               <BsStarFill key={star} className="Text-shadow" />
             ))}
           </h1>
-          <div className="flex flex-row gap-4 w-full items-center">
+          <div className="flex flex-row gap-4 w-full items-center flex-wrap">
             {game.developers.map((developer) => (
               <div
                 key={developer.id}
-                className="flex flex-row gap-2 items-center w-full"
+                className="flex flex-row gap-2 items-center"
               >
                 <div className="w-[50px] h-[50px] rounded-full overflow-hidden bg-gray-800">
                   <img
@@ -79,7 +79,7 @@ const GameDetailsHero = ({ game, slug }: Props) => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h6 className="text-[18px] font-medium text-gray-200">
+                <h6 className="text-[18px] font-medium text-gray-200 whitespace-nowrap">
                   {developer.name}
                 </h6>
               </div>

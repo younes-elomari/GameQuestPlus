@@ -43,13 +43,10 @@ const GameDetailsText = ({
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex flex-row gap-4 w-full"
+          className="flex flex-row gap-6 w-full flex-wrap"
         >
-          {genres.map((genre, index) => (
-            <div
-              key={genre.id}
-              className="flex flex-row gap-2 items-center w-full"
-            >
+          {genres.map((genre) => (
+            <div key={genre.id} className="flex flex-row gap-2 items-center">
               <div className="w-[50px] h-[50px] rounded-full overflow-hidden bg-gray-800">
                 <img
                   src={genre.image_background}
@@ -57,7 +54,7 @@ const GameDetailsText = ({
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h6 className="text-[18px] font-medium text-gray-200">
+              <h6 className="text-[18px] font-medium text-gray-200 whitespace-nowrap">
                 {genre.name}
               </h6>
             </div>

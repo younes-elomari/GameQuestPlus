@@ -5,6 +5,7 @@ import useGames from "@/app/hooks/useGames";
 import Game from "@/app/entities/Game";
 import useGameQueryStore from "@/app/store";
 import GameCardSkeleton from "./GameCardSkeleton";
+import Spinner from "./Spinner";
 
 const GameGrid = () => {
   const {
@@ -31,12 +32,12 @@ const GameGrid = () => {
           </React.Fragment>
         ))}
       </div>
-      {!isLoading && (
+      {hasNextPage && (
         <button
           onClick={() => fetchNextPage()}
           className="mt-14 py-2 px-8 button-primary text-center font-semibold text-white cursor-pointer rounded-lg max-w-[200px]"
         >
-          More Games
+          More Games {isFetchingNextPage && <Spinner />}
         </button>
       )}
     </div>

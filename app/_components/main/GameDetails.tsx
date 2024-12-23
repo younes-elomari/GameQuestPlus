@@ -6,6 +6,7 @@ import GameDetailsHero from "../sub/GameDetailsHero";
 import GameDetailsText from "../sub/GameDetailsText";
 import GamePlatforms from "../sub/GamePlatforms";
 import GameTrailer from "../sub/GameTrailler";
+import GameScreenshots from "../sub/GameScreenshots";
 
 interface Props {
   slug: string;
@@ -24,6 +25,7 @@ const GameDetails = ({ slug }: Props) => {
         genres={game.genres}
       />
       <GamePlatforms platforms={game.platforms} />
+      <GameScreenshots game={game} slug={game.slug} />
       <GameTrailer gameId={game.id} />
     </div>
   );

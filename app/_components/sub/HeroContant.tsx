@@ -28,7 +28,7 @@ const HeroContant = () => {
         >
           <span>
             Read About Games That You
-            <span className="uppercase text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-cyan-500">
+            <span className="uppercase text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-cyan-500">
               {" "}
               Enjoy
             </span>
