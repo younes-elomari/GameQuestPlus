@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const NavBar = () => {
   return (
@@ -15,12 +16,18 @@ const NavBar = () => {
             <Image src="/logoGameQuest.svg" alt="logo" width={40} height={40} />
           </a>
           <div className="h-full flex flex-row items-center gap-3">
-            <button className="text-nowrap w-full py-2 px-8 button-primary text-center font-semibold text-white cursor-pointer rounded-lg">
+            <Link
+              href="/login"
+              className="text-nowrap w-full py-2 px-8 button-primary text-center font-semibold text-white cursor-pointer rounded-lg"
+            >
               Log In
-            </button>
-            <button className="text-nowrap w-full py-2 px-8 button-primary text-center font-semibold text-white cursor-pointer rounded-lg">
+            </Link>
+            <Link
+              href="/register"
+              className="text-nowrap w-full py-2 px-8 button-primary text-center font-semibold text-white cursor-pointer rounded-lg"
+            >
               Sign Up
-            </button>
+            </Link>
           </div>
         </div>
       </div>

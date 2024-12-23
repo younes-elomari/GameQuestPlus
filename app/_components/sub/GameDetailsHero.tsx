@@ -28,7 +28,7 @@ const GameDetailsHero = ({ game, slug }: Props) => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className=" px-10 py-12 w-full flex flex-col items-center pt-20"
+      className="px-10 py-12 w-full flex flex-col items-center pt-20"
     >
       <div className="relative flex md:flex-row gap-8 items-center rounded-md w-full h-full p-2 overflow-hidden">
         <motion.div
