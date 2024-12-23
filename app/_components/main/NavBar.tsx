@@ -9,12 +9,12 @@ const NavBar = () => {
     <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <div className="h-[55px] fixed top-[10px] rounded-lg right-[10px] left-[10px] shadow-lg shadow-[#2a0e61]/50 bg-[#01012557] backdrop-blur-md z-50 px-5">
         <div className="w-full h-full flex flex-row items-center justify-between px-[10px]">
-          <a
-            href="#games"
+          <Link
+            href="/"
             className="h-full flex flex-row items-center justify-center"
           >
             <Image src="/logoGameQuest.svg" alt="logo" width={40} height={40} />
-          </a>
+          </Link>
           <div className="h-full flex flex-row items-center gap-3">
             <Link
               href="/login"
