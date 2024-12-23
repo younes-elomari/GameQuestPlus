@@ -1,4 +1,3 @@
-import Footer from "./_components/main/Footer";
 import Games from "./_components/main/Games";
 import Hero from "./_components/main/Hero";
 import Subscribe from "./_components/main/Subscribe";
@@ -10,7 +9,6 @@ export default function Home() {
         <Hero />
         <Games />
         <Subscribe />
-        <Footer />
       </div>
     </main>
   );

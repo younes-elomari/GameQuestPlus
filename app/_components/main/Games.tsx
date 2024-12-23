@@ -12,14 +12,14 @@ const Games = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row gap-4 h-full w-full px-10"
+      className="grid md:grid-cols-[280px_1fr] gap-4 h-full md:px-10 px-5"
     >
-      <div className="w-[280px] h-auto flex flex-col gap-4">
+      <div className="hidden md:flex w-full h-auto flex-col gap-4">
         <Search />
         <SortSelector />
         <Genres />
       </div>
-      <div className="flex-1 space-y-4">
+      <div className=" space-y-4">
         <Platforms />
         <GameGrid />
       </div>

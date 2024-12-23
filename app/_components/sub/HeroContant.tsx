@@ -10,7 +10,7 @@ import {
 
 const HeroContant = () => {
   return (
-    <motion.div className="grid md:grid-cols-2 items-center justify-center px-10 pt-10 w-full z-[20] backdrop-blur-md">
+    <motion.div className="grid md:grid-cols-2 items-center justify-center md:px-10 px-5 pt-10 w-full z-[20] backdrop-blur-md">
       <div className="h-full w-full flex flex-col gap-3 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
@@ -37,7 +37,7 @@ const HeroContant = () => {
 
         <motion.a
           variants={slideInFromLeft(0.8)}
-          className="mt-14 py-2 px-8 button-primary text-center font-semibold text-white cursor-pointer rounded-lg max-w-[200px]"
+          className="mt-14 py-2 md:px-8 px-4 button-primary text-center font-medium text-white cursor-pointer rounded-lg max-w-[200px]"
         >
           Start Exploring
         </motion.a>

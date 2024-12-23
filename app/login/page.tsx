@@ -6,13 +6,14 @@ import { CiUser } from "react-icons/ci";
 import { IoLockClosedOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "@/utils/motion";
+import LoginForm from "../_components/sub/LoginForm";
 
 const LoginPage = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="px-10 w-full grid md:grid-cols-2 items-center py-20"
+      className="px-5 md:px-10 w-full grid md:grid-cols-2 items-center py-20"
     >
       <div className="overflow-hidden relative bg-fuchsia-900 bg-opacity-15 flex flex-col justify-center h-full w-full px-10 py-44">
         <Image
@@ -31,7 +32,7 @@ const LoginPage = () => {
           Welcome Back!
         </motion.h1>
       </div>
-      <div className="h-full w-full p-7 bg-fuchsia-900 bg-opacity-15 flex flex-col gap-8 text-gray-200">
+      <div className="h-full w-full md:p-7 p-5 bg-fuchsia-900 bg-opacity-15 flex flex-col gap-8 text-gray-200">
         <motion.div
           variants={slideInFromRight(0.4)}
           initial="hidden"
@@ -48,40 +49,7 @@ const LoginPage = () => {
           initial="hidden"
           animate="visible"
         >
-          <form className="space-y-4">
-            <div className="space-y-2">
-              <h6 className="text-[16px] text-gray-500 font-medium">
-                User Name
-              </h6>
-              <div className="p-3 border border-gray-700 rounded-xl flex flex-row gap-2 items-center">
-                <input
-                  type="text"
-                  placeholder="User Name"
-                  className="w-full bg-transparent text-gray-300 text-[16px] font-medium outline-none"
-                />
-                <CiUser />
-              </div>
-            </div>
-            <div className="space-y-2">
-              <h6 className="text-[16px] text-gray-500 font-medium">
-                Password
-              </h6>
-              <div className="p-3 border border-gray-700 rounded-xl flex flex-row gap-2 items-center">
-                <input
-                  type="text"
-                  placeholder="Password"
-                  className="w-full bg-transparent text-gray-300 text-[16px] font-medium outline-none"
-                />
-                <IoLockClosedOutline />
-              </div>
-            </div>
-            <button
-              type="submit"
-              className="w-full px-4 py-3 bg-purple-800 font-medium text-[16px] rounded-md hover:bg-purple-900 transition"
-            >
-              Login
-            </button>
-          </form>
+          <LoginForm />
         </motion.div>
 
         <motion.h1

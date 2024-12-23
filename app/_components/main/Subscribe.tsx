@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import HeroContant from "../sub/HeroContant";
 import { motion } from "framer-motion";
 import SubscribeContent from "../sub/SubscribeContent";
 

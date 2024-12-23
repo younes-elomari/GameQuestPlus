@@ -9,7 +9,7 @@ const SubscribeContent = () => {
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
       viewport={{ once: true }}
-      className="rounded-md bg-[#1937ac17] backdrop-blur-md  flex flex-col gap-6 items-center justify-center px-3 py-20 m-10 z-[20]"
+      className="rounded-md bg-[#1937ac17] backdrop-blur-md flex flex-col gap-6 items-center justify-center px-3 py-20 md:m-10 m-3 z-[20]"
     >
       <motion.div
         variants={slideInFromTop}
@@ -20,7 +20,7 @@ const SubscribeContent = () => {
           once: true,
         }}
       >
-        <h1 className="text-5xl font-semibold text-white max-w-[600px] w-auto h-auto">
+        <h1 className="text-5xl font-semibold text-white max-w-[600px] h-auto text-center">
           Subscibe To Get
           <span className="uppercase font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-cyan-500">
             {" "}
@@ -32,7 +32,7 @@ const SubscribeContent = () => {
           amet consectetur adipisicing elit. Quisquam asperiores, sapiente nulla
           maiores praesentium dolorem vel accusamus odio quae blanditiis.
         </p>
-        <div className="w-[600px]">
+        <div className="w-full">
           <form
             onSubmit={(event) => {
               event.preventDefault();
@@ -46,7 +46,7 @@ const SubscribeContent = () => {
               />
               <button
                 type="submit"
-                className="py-2 px-8 button-primary text-center font-semibold text-white cursor-pointer rounded-lg max-w-[200px]"
+                className="py-2 md:px-8 px-4 button-primary text-center font-medium text-white cursor-pointer rounded-lg"
               >
                 Subscribe
               </button>

@@ -21,7 +21,7 @@ const GameGrid = () => {
 
   return (
     <div className="w-full h-full space-y-3">
-      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
         {isLoading &&
           skeletons.map((skeleton) => <GameCardSkeleton key={skeleton} />)}
         {data?.pages.map((page, index) => (

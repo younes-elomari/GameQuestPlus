@@ -7,7 +7,7 @@ import Link from "next/link";
 const NavBar = () => {
   return (
     <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className="h-[55px] fixed top-[10px] rounded-lg right-[10px] left-[10px] shadow-lg shadow-[#2a0e61]/50 bg-[#010125]  z-50 px-5">
+      <div className="h-[55px] fixed top-[10px] rounded-lg right-[10px] left-[10px] shadow-lg shadow-[#2a0e61]/50 bg-[#010125]  z-50 md:px-5 px-2">
         <div className="w-full h-full flex flex-row items-center justify-between px-[10px]">
           <Link
             href="/"
@@ -18,13 +18,13 @@ const NavBar = () => {
           <div className="h-full flex flex-row items-center gap-3">
             <Link
               href="/login"
-              className="text-nowrap w-full py-2 px-8 button-primary text-center font-semibold text-white cursor-pointer rounded-lg"
+              className="text-nowrap w-full py-2 md:px-8 px-4 button-primary text-center font-medium text-white cursor-pointer rounded-lg"
             >
               Log In
             </Link>
             <Link
               href="/register"
-              className="text-nowrap w-full py-2 px-8 button-primary text-center font-semibold text-white cursor-pointer rounded-lg"
+              className="text-nowrap w-full py-2 md:px-8 px-4 button-primary text-center font-medium text-white cursor-pointer rounded-lg"
             >
               Sign Up
             </Link>

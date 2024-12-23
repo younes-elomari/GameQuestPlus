@@ -11,7 +11,7 @@ const Footer = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row gap-6 items-center justify-between px-10 py-20 text-gray-300"
+      className="flex flex-col md:flex-row gap-6 items-center justify-between px-10 py-20 text-gray-300"
     >
       <motion.div
         variants={slideInFromLeft(0.3)}
