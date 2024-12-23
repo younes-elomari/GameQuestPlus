@@ -7,7 +7,7 @@ import Link from "next/link";
 const NavBar = () => {
   return (
     <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className="h-[55px] fixed top-[10px] rounded-lg right-[10px] left-[10px] shadow-lg shadow-[#2a0e61]/50 bg-[#01012557] backdrop-blur-md z-50 px-5">
+      <div className="h-[55px] fixed top-[10px] rounded-lg right-[10px] left-[10px] shadow-lg shadow-[#2a0e61]/50 bg-[#010125]  z-50 px-5">
         <div className="w-full h-full flex flex-row items-center justify-between px-[10px]">
           <Link
             href="/"

@@ -10,9 +10,7 @@ import {
 
 const HeroContant = () => {
   return (
-    <motion.div          
-      className="grid md:grid-cols-2 items-center justify-center px-10 mt-10 w-full z-[20]"
-    >
+    <motion.div className="grid md:grid-cols-2 items-center justify-center px-10 pt-10 w-full z-[20] backdrop-blur-md">
       <div className="h-full w-full flex flex-col gap-3 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}

@@ -8,7 +8,7 @@ const apiClient = new APIClient<Game>("/games");
 const useGames = () => {
   const gameQuery = useGameQueryStore((s) => s.gameQuery);
 
-  return useQuery<FetchResponse<Game>, Error>({
+  return useInfiniteQuery<FetchResponse<Game>, Error>({
     queryKey: ["games", gameQuery],
     queryFn: ({ pageParam = 1 }) =>
       apiClient.getAll({
@@ -20,10 +20,11 @@ const useGames = () => {
           page: pageParam,
         },
       }),
-    // getNextPageParam: (lastPage, allPages) => {
-    //   return lastPage.next ? allPages.length + 1 : undefined;
-    // },
+    getNextPageParam: (lastPage, allPages) => {
+      return lastPage.next ? allPages.length + 1 : undefined;
+    },
     staleTime: 24 * 60 * 60 * 1000,
+    initialPageParam: 1,
   });
 };
 
