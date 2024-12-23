@@ -1,6 +1,7 @@
 "use client";
 import { slideInFromTop } from "@/utils/motion";
 import { motion } from "framer-motion";
+import SubscribeForm from "./SubscribeForm";
 
 const SubscribeContent = () => {
   return (
@@ -33,25 +34,7 @@ const SubscribeContent = () => {
           maiores praesentium dolorem vel accusamus odio quae blanditiis.
         </p>
         <div className="w-full">
-          <form
-            onSubmit={(event) => {
-              event.preventDefault();
-            }}
-          >
-            <div className="w-full p-3 bg-gray-500 bg-opacity-20 border border-gray-700 rounded-xl flex flex-row gap-2 justify-center">
-              <input
-                type="text"
-                placeholder="Enter Your E-mail Address"
-                className="w-full bg-transparent text-gray-300 text-[16px] font-medium outline-none"
-              />
-              <button
-                type="submit"
-                className="py-2 md:px-8 px-4 button-primary text-center font-medium text-white cursor-pointer rounded-lg"
-              >
-                Subscribe
-              </button>
-            </div>
-          </form>
+          <SubscribeForm />
         </div>
       </motion.div>
     </motion.div>

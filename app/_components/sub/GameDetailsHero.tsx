@@ -33,7 +33,7 @@ const GameDetailsHero = ({ game, slug }: Props) => {
         >
           <img
             src={game.background_image}
-            className="w-full h-full object-cover absolute z-[-10]"
+            className="w-full h-full object-cover absolute z-[-10] bg-gray-700"
           />
           <div className="flex flex-col place-content-end h-full">
             <div className="space-y-1 p-4 Game-details-name">

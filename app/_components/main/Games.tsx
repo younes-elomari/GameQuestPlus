@@ -25,10 +25,10 @@ const Games = () => {
           <MobileNavBar />
           <Search />
         </div>
-        {/* <div className="space-y-4">
+        <div className="space-y-4">
           <Platforms />
           <GameGrid />
-        </div> */}
+        </div>
       </div>
     </motion.div>
   );

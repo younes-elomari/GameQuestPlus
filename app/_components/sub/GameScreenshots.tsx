@@ -16,7 +16,7 @@ const GameScreenshots = ({ game, slug }: Props) => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="h-full w-full px-10 py-12 flex flex-col gap-4"
+      className="h-full w-full px-5 md:px-10 py-12 flex flex-col gap-4"
     >
       <div className="w-full h-full grid md:grid-cols-3 lg:grid-cols-4 gap-4">
         {scrennshots?.results.map((scrennshot, index) => (

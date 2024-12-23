@@ -17,11 +17,11 @@ const Hero = () => {
         transition={{ delay: 0.3 }}
       >
         <Image
-          src="/heroBackground.svg"
+          src="/subscribeBackground.svg"
           alt="hero background"
           width={1920}
           height={1024}
-          className="absolute w-full h-full object-cover opacity-75 "
+          className="absolute w-full h-full object-cover opacity-75"
         />
       </motion.div>
       <HeroContant />

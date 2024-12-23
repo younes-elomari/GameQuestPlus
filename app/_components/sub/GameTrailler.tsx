@@ -14,7 +14,7 @@ const GameTrailer = ({ gameId }: Props) => {
   const first = data?.results[0];
 
   return first ? (
-    <div className="flex flex-col h-full w-full px-10 py-12">
+    <div className="flex flex-col h-full w-full px-5 md:px-10 py-12">
       <video
         autoPlay
         poster={first.preview}

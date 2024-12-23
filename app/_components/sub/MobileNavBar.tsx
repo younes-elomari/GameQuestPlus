@@ -5,7 +5,7 @@ import SortSelector from "./SortSelector";
 import Genres from "./Genres";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
-import { slideInFromLeft, slideInFromTop } from "@/utils/motion";
+import { slideInFromTop } from "@/utils/motion";
 
 const MobileNavBar = () => {
   const [open, setOpen] = useState(false);
@@ -29,7 +29,7 @@ const MobileNavBar = () => {
           variants={slideInFromTop}
           initial="hidden"
           animate="visible"
-          className="top-0 flex flex-col items-center bottom-0 right-0 left-0 bg-[#010125] overflow-x-hidden overflow-y-auto space-y-4 p-4 z-[50] fixed"
+          className="top-0 flex flex-col items-end bottom-0 right-0 left-0 bg-[#010125] overflow-x-hidden overflow-y-auto space-y-4 p-4 z-[50] fixed"
         >
           <button
             onClick={() => setOpen(false)}

@@ -42,7 +42,8 @@ const SortSelector = () => {
             className="flex flex-row gap-3 items-center py-2"
           >
             <h6
-              onClick={() => setSelectedSortOrder(order.value)}
+              onClick={() =>
+                 setSelectedSortOrder(order.value)}
               className={`text-[18px] font-semibold cursor-pointer hover:text-fuchsia-600 transition ${activeSortOrder(
                 order.value
               )}`}
