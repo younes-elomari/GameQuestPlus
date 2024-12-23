@@ -7,6 +7,7 @@ import { CiUser } from "react-icons/ci";
 import { IoLockClosedOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "@/utils/motion";
+import RegisterForm from "../_components/sub/RegisterForm";
 
 const RegisterPage = () => {
   return (
@@ -49,7 +50,7 @@ const RegisterPage = () => {
           initial="hidden"
           animate="visible"
         >
-          
+          <RegisterForm />
         </motion.div>
 
         <motion.h1

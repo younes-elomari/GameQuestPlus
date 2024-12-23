@@ -6,6 +6,7 @@ import Search from "../sub/Search";
 import Platforms from "../sub/Platforms";
 import GameGrid from "../sub/GameGrid";
 import SortSelector from "../sub/SortSelector";
+import MobileNavBar from "../sub/MobileNavBar";
 
 const Games = () => {
   return (
@@ -19,9 +20,15 @@ const Games = () => {
         <SortSelector />
         <Genres />
       </div>
-      <div className=" space-y-4">
-        <Platforms />
-        <GameGrid />
+      <div>
+        <div className="md:hidden space-y-4 pb-4">
+          <MobileNavBar />
+          <Search />
+        </div>
+        {/* <div className="space-y-4">
+          <Platforms />
+          <GameGrid />
+        </div> */}
       </div>
     </motion.div>
   );

@@ -9,10 +9,15 @@
 
 .button-primary:hover {
   /* color: #1a41d1; */
-  background: linear-gradient(270deg, rgb(74, 93, 249), rgb(26, 65, 209));
+  background: linear-gradient(90deg, rgb(74, 93, 249), rgb(26, 65, 209));
   box-shadow: inset 0 0 12px #bf97ff70;
 }
 
 .Text-shadow {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.Game-details-name {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  box-shadow: inset 0 0 12px #bf97ff70;
 }
