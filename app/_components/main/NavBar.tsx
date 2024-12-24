@@ -23,7 +23,7 @@ const NavBar = () => {
               Log In
             </Link>
             <Link
-              href="/register"
+              href="/signup"
               className="text-nowrap w-full py-2 md:px-8 px-4 button-primary text-center font-medium text-white cursor-pointer rounded-lg"
             >
               Sign Up

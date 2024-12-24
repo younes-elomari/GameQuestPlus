@@ -57,7 +57,7 @@ const LoginComponent = () => {
           className="font-medium"
         >
           New User?{" "}
-          <Link href="/register" className="text-purple-500 px-2">
+          <Link href="/signup" className="text-purple-500 px-2">
             SignUp
           </Link>
         </motion.h1>
