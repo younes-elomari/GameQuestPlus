@@ -38,9 +38,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#010125] overflow-x-hidden`}
       >
         <QueryClientProvider>
-          <NavBar />
-          {children}
-          <Footer />
+          <main className="max-w-[1536px] m-auto">
+            <NavBar />
+            {children}
+            <Footer />
+          </main>
         </QueryClientProvider>
       </body>
     </html>
