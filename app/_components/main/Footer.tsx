@@ -20,7 +20,7 @@ const Footer = () => {
         viewport={{ once: true }}
         className="text-[15px] text-center font-medium"
       >
-        &copy; Game Quest 2023. All rights reserved
+        &copy; GameQuest Plus 2023. All rights reserved
       </motion.div>
       <motion.div
         variants={slideInFromRight(0.6)}
