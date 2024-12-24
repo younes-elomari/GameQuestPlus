@@ -1,5 +1,4 @@
 import GameDetails from "@/app/_components/main/GameDetails";
-import { Metadata } from "next";
 import React from "react";
 
 interface Props {

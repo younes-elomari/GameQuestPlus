@@ -22,7 +22,7 @@ const LoginForm = () => {
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit = handleSubmit(async (data) => {
+  const onSubmit = handleSubmit(async () => {
     toast.success("Welcome Back! you have logedIn.");
   });
 

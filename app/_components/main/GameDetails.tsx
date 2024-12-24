@@ -15,7 +15,9 @@ const GameDetails = ({ slug }: Props) => {
   const { data: game, error } = useGame(slug!);
 
   useEffect(() => {
-    error?.message && toast.error(error?.message);
+    if (error?.message) {
+      toast.error(error.message);
+    }
   }, [error?.message]);
 
   if (!game)
@@ -27,7 +29,7 @@ const GameDetails = ({ slug }: Props) => {
 
   return (
     <div className="relative flex flex-col h-full w-full">
-      <GameDetailsHero game={game} slug={game.slug} />
+      <GameDetailsHero game={game} />
       <GameScreenshotsSlider game={game} />
       <GameTrailer gameId={game.id} />
       <Toaster />

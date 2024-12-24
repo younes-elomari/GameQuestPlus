@@ -20,7 +20,7 @@ const SubscribeForm = () => {
     resolver: zodResolver(subscribeSchema),
   });
 
-  const onSubmit = handleSubmit(async (data) => {
+  const onSubmit = handleSubmit(async () => {
     toast.success("Thank you for your subscribe!");
   });
 

@@ -8,10 +8,9 @@ import { IoMdArrowDropright } from "react-icons/io";
 
 interface Props {
   game: Game;
-  slug: string;
 }
 
-const GameDetailsHero = ({ game, slug }: Props) => {
+const GameDetailsHero = ({ game }: Props) => {
   const numberOfStars = () => {
     if (game.metacritic >= 80) return [1, 2, 3, 4, 5];
     if (game.metacritic < 80) return [1, 2, 3, 4];
