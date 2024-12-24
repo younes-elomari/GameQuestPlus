@@ -9,7 +9,7 @@ const Genres = () => {
   const selectedGenreId = useGameQueryStore((s) => s.gameQuery.genreId);
   const setGenreId = useGameQueryStore((s) => s.setGenreId);
 
-  const { data: genres, isLoading, error } = useGenres();
+  const { data: genres } = useGenres();
 
   const activeGenre = (id: number | undefined) => {
     return id === selectedGenreId || undefined ? "text-fuchsia-600" : null;
