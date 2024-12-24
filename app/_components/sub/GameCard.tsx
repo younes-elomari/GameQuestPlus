@@ -36,7 +36,7 @@ const GameCard = ({ game, index }: { game: Game; index: number }) => {
         <h1 className="text-gray-300 uppercase font-medium text-[18px]">
           {game.name}
         </h1>
-        <h1 className="flex flex-row gap-2 items-center text-fuchsia-800 uppercase font-medium text-[16px]">
+        <h1 className="flex flex-row gap-2 items-center text-yellow-500 uppercase font-medium text-[16px]">
           {numberOfStars().map((star) => (
             <BsStarFill key={star} />
           ))}

@@ -2,9 +2,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { CiUser } from "react-icons/ci";
-import { IoLockClosedOutline } from "react-icons/io5";
-import { MdAlternateEmail } from "react-icons/md";
 import { z } from "zod";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -37,6 +34,7 @@ const SubscribeForm = () => {
         <div className="w-full p-3 bg-gray-500 bg-opacity-20 border border-gray-700 rounded-xl flex flex-row gap-2 justify-center">
           <input
             {...register("email")}
+            autoComplete="off"
             type="text"
             placeholder="Enter Your E-mail Address"
             className="w-full bg-transparent text-gray-300 text-[16px] font-medium outline-none"

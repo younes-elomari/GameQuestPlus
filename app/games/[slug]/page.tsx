@@ -1,4 +1,5 @@
 import GameDetails from "@/app/_components/main/GameDetails";
+import { Metadata } from "next";
 import React from "react";
 
 interface Props {
@@ -14,5 +15,13 @@ const GameDetailsPage = async ({ params }: Props) => {
     </div>
   );
 };
+
+export async function generateMetadata({ params }: Props) {
+  return {
+    title: (await params).slug,
+    description:
+      "**Game Details** :Discover the world's most thrilling games! Dive into detailed descriptions, explore platforms, genres, and get a glimpse through stunning screenshots. Your next adventure awaits!",
+  };
+}
 
 export default GameDetailsPage;

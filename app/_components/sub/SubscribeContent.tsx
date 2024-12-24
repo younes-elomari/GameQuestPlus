@@ -29,9 +29,8 @@ const SubscribeContent = () => {
           </span>
         </h1>
         <p className="text-center text-lg text-gray-400 my-5 max-w-[600px]">
-          Subscribe to get our updates and newest games. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Quisquam asperiores, sapiente nulla
-          maiores praesentium dolorem vel accusamus odio quae blanditiis.
+          Stay ahead of the game! Subscribe for exclusive updates, the latest
+          game releases, and insider scoops!
         </p>
         <div className="w-full">
           <SubscribeForm />
